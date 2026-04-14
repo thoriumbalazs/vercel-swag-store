@@ -1,0 +1,16 @@
+services:
+  node:
+    # command: sh -c "pnpm install && pnpm build && pnpm start"
+    # command: tail -f /dev/null
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=dev"
+      - "traefik.http.routers.vercel-swag-store.entrypoints=http"
+      - "traefik.http.routers.vercel-swag-store.rule=Host(`vercel-swag-store.localhost`)"
+      - "traefik.http.routers.vercel-swag-store.service=vercel-swag-store"
+      - "traefik.http.services.vercel-swag-store.loadbalancer.server.port=3000"
+
+networks:
+  default:
+    name: dev
+    external: true

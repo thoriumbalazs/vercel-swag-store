@@ -1,0 +1,11 @@
+FROM node:24
+
+# Install pnpm
+RUN npm install -g pnpm
+# Install vercel
+RUN npm install -g vercel
+
+# Pre-create directories that will be anonymous volumes,
+# owned by the node user so pnpm install can write to them
+RUN mkdir -p /app/node_modules /app/apps/store/node_modules /app/apps/store/.next /app/packages/ui/node_modules \
+    && chown -R node:node /app

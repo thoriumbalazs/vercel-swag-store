@@ -1,0 +1,14 @@
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    user: node
+    working_dir: /app
+    command: sh -c "pnpm install && pnpm dev"
+    volumes:
+      - ./:/app
+      - /app/apps/store/.next
+      - /app/node_modules
+      - /app/apps/store/node_modules
+      - /app/packages/ui/node_modules
