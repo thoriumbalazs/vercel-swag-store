@@ -22,6 +22,9 @@ pnpm build
 # Format and lint
 pnpm format
 pnpm lint
+
+# Check and fix issues
+pnpm check:fix
 ```
 
 ## Project Structure
@@ -29,11 +32,9 @@ pnpm lint
 ```
 nextjs-foundations-starter/
 ├── apps/
-│   ├── web/                    # Marketing site (localhost:3000)
-│   └── blog/                   # Content hub (localhost:3001)
+│   ├── store/                  # Store site (localhost:3000)
 ├── packages/
-│   ├── ui/                     # Shared UI components
-│   └── api/                    # Mock data layer (Faker)
+│   ├── ui/                     # Shared UI components (shadcn/ui)
 ├── turbo.json                  # Turborepo configuration
 ├── biome.jsonc                 # Biome linting/formatting
 └── package.json
