@@ -44,7 +44,7 @@ export default function HomePage() {
 }
 
 async function FeaturedProducts() {
-  // NOTE: we could add error handling there, but if featured products can't show,
+  // NOTE: we could add error handling here, but if featured products can't show,
   // it's probably better have the Error boundary handle it
   const products = await getFeaturedProducts()
   return <ProductGrid products={products} />
