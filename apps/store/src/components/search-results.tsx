@@ -1,6 +1,6 @@
+import { Skeleton } from '@repo/ui/components/skeleton'
 import { ProductGrid } from '@/components/product-grid'
 import { getProducts } from '@/lib/products'
-import { Skeleton } from '@repo/ui/components/skeleton'
 
 export async function SearchResults({
   query,
