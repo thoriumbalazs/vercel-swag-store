@@ -1,6 +1,6 @@
-# Next.js Foundations Starter
+# Vercel Swag Store
 
-A Turborepo monorepo starter for the Next.js Foundations certification course.
+Vercel Swag Store implementation, based on the Turborepo starter for the Next.js Foundations certification course.
 
 ## Getting Started
 
@@ -40,7 +40,7 @@ nextjs-foundations-starter/
 
 ## Apps
 
-- **web** (`apps/store`) - Marketing site running on port 3000
+- **store** (`apps/store`) - Swag store site running on port 3000
 
 ## Packages
 
